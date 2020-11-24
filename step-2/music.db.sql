@@ -1,0 +1,14 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "music" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"file_id"	TEXT NOT NULL,
+	"right_answer"	TEXT NOT NULL,
+	"wrong_answers"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+INSERT INTO "music" VALUES (1,'35c2aa52-d1f4-4681-9a59-0c2361c4e6a5','1','2,3,4,5');
+INSERT INTO "music" VALUES (2,'698dd09e-2a75-4add-bca6-72b87b56e4aa','2','1,3,4,5');
+INSERT INTO "music" VALUES (3,'c0cc53fb-7818-4397-baaa-fb095c763f60','3','1,2,4,5');
+INSERT INTO "music" VALUES (4,'6357bfdd-6206-46ab-b348-500645cacf1f','4','1,2,3,5');
+INSERT INTO "music" VALUES (5,'3ef066d1-24a5-42db-addf-0420eed18d3b','5','1,2,3,4');
+COMMIT;
